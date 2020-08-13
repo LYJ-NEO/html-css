@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Bootstrap 排版</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+      <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+        div{ border-color:gray; border-style:groove } 
+      </style>
+   </head>
+
+   <body>
+        <div class="container" > Bootstrap中定义了所有的HTML标题（h1到h6）的样式: &lt;h1&gt; 到 &lt;h6&gt;
+            <div class="row">  
+                 <div class="col-md-6">
+                    <h1>标题1 h1</h1>
+                    <h2>标题2 h2</h2>
+                    <h3>标题3 h3</h3>
+                    <h4>标题4 h4</h4>
+                    <h5>标题5 h5</h5>
+                    <h6>标题6 h6</h6>
+                 </div>
+                 <div class="col-md-6">
+                    &lt;h1&gt;标题1 h1&lt;/h1&gt;<br>
+                    &lt;h2&gt;标题2 h2&lt;/h2&gt;<br>
+                    &lt;h3&gt;标题3 h3&lt;/h3&gt;<br>
+                    &lt;h4&gt;标题4 h4&lt;/h4&gt;<br>
+                    &lt;h5&gt;标题5 h5&lt;/h5&gt;<br>
+                    &lt;h6&gt;标题6 h6&lt;/h6&gt;<br>
+                 </div>
+            </div>
+        </div>
+
+        <div class="container" > 如果需要向任何标题添加一个内联子标题，只需要简单地在元素两旁添加 &lt;small&gt;&lt;/small&gt;
+            <div class="row">  
+                <div class="col-md-6">
+                    <h1>标题1 h1 <small>副标题1 h1</small></h1>
+                    <h2>标题2 h2 <small>副标题2 h2</small></h2>
+                    <h3>标题3 h3 <small>副标题3 h3</small></h3>
+                    <h4>标题4 h4 <small>副标题4 h4</small></h4>
+                    <h5>标题5 h5 <small>副标题5 h5</small></h5>
+                    <h6>标题6 h6 <small>副标题6 h6</small></h6>
+                </div>
+                <div class="col-md-6">
+                    &lt;h1&gt;标题1 h1 &lt;small&gt;副标题1 h1&lt;/small&gt;&lt;/h1&gt;<br>
+                    &lt;h2&gt;标题2 h2 &lt;small&gt;副标题2 h2&lt;/small&gt;&lt;/h2&gt;<br>
+                    &lt;h3&gt;标题3 h3 &lt;small&gt;副标题3 h3&lt;/small&gt;&lt;/h3&gt;<br>
+                    &lt;h4&gt;标题4 h4 &lt;small&gt;副标题4 h4&lt;/small&gt;&lt;/h4&gt;<br>
+                    &lt;h5&gt;标题5 h5 &lt;small&gt;副标题5 h5&lt;/small&gt;&lt;/h5&gt;<br>
+                    &lt;h6&gt;标题6 h6 &lt;small&gt;副标题6 h6&lt;/small&gt;&lt;/h6&gt;<br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" > 为了给段落添加强调文本，则可以添加 class="lead"，这将得到更大更粗、行高更高的文本
+            <h2>引导主体副本</h2>
+            <p class="lead" > 这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。</p>
+        </div>
+
+        <div class="container" > HTML的默认强调标签&lg;small&gt;（设置文本为父文本大小的 85%）、&lg;strong&gt;（设置文本为更粗的文本）、&lg;em&gt;（设置文本为斜体）
+            <div class="col-md-12">
+                <small>本行内容是在标签内</small><br>
+                <strong>本行内容是在标签内</strong><br>
+                <em>本行内容是在标签内，并呈现为斜体</em><br>
+                <p class="text-left">向左对齐文本</p>
+                <p class="text-center">居中对齐文本</p>
+                <p class="text-right">向右对齐文本</p>
+                <p class="text-muted">本行内容是减弱的</p>
+                <p class="text-primary">本行内容带有一个 primary class</p>
+                <p class="text-success">本行内容带有一个 success class</p>
+                <p class="text-info">本行内容带有一个 info class</p>
+                <p class="text-warning">本行内容带有一个 warning class</p>
+                <p class="text-danger">本行内容带有一个 danger class</p>
+            </div>
+        </div>
+
+        <div class="container"> 缩写-Bootstrap 定义 <abbr> 元素的样式为显示在文本底部的一条虚线边框、地址（Address）- 网页上显示联系信息
+            <div class="col-md-12">
+                <abbr title="Real Simple Syndication" class="initialism">RSS</abbr>
+                <address>
+                    <strong>Full Name</strong><br>
+                    <a href="mailto:#">mailto@somedomain.com</a>
+                </address>
+            </div>
+        </div>
+
+        <div class="container"> 在任意的HTML文本旁使用默认的&lt;blockquote&gt;添加一个&lt;small&gt;标签来标识引用的来源，使用class.pull-right 向右对齐引用
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <blockquote>这是一个带有源标题的引用。
+                    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                </blockquote>
+                <blockquote class="pull-right">这是一个向右对齐的引用。
+                    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                </blockquote>        
+            </div>
+        </div>
+        
+        <div class="container"> Bootstrap 支持有序列表、无序列表和定义列表
+            <h4>有序列表</h4>
+                <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                </ol>
+                <h4>无序列表</h4>
+                <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                </ul>
+                <h4>未定义样式列表</h4>
+                <ul class="list-unstyled">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                </ul>
+                <h4>内联列表</h4>
+                <ul class="list-inline">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                </ul>
+                <h4>定义列表</h4>
+                <dl>
+                <dt>Description 1</dt>
+                <dd>Item 1</dd>
+                <dt>Description 2</dt>
+                <dd>Item 2</dd>
+                </dl>
+                <h4>水平的定义列表</h4>
+                <dl class="dl-horizontal">
+                <dt>Description 1</dt>
+                <dd>Item 1</dd>
+                <dt>Description 2</dt>
+                <dd>Item 2</dd>
+                </dl> 
+        </div>
+        
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+   </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+.row {margin-right: -1px; margin-left: -1px; margin-top: 5px; margin-bottom: 5px; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px;}
+-->
+<html>
+
+   <head>
+      <title>Bootstrap 模板</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+      <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+        div{ border-color:gray; border-style:solid; } 
+      </style>
+   </head>
+
+    <body>
+
+        <div class="container" > 列组合-基础使用
+            <div class="row">  
+                <div class="col-md-4">col-md-4_row1</div>
+                <div class="col-md-8">col-md-8_row1</div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-4">col-md-4_row2</div>
+                <div class="col-md-4">col-md-4_row2</div>
+                <div class="col-md-4">col-md-4_row2</div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-3">col-md-3_row3</div>
+                <div class="col-md-6">col-md-6_row3</div>
+                <div class="col-md-3">col-md-3_row3</div>
+            </div>
+        </div>
+
+        <div class="container"> 列偏移
+            <div class="row">       
+                <div class="col-md-4">col-md-4_row1</div>
+                <div class="col-md-4 col-md-offset-2">col-md-8_row1</div>  <!-- 使用 col-*-offset类进行设置偏移量 -->
+            </div>
+        </div>
+
+        <div class="container"> 列嵌套
+            <div class="row">
+                <div class="col-md-8"> 嵌套了一个网格
+                    <div class="row">
+                        <div class="col-md-6">col-md-6</div>
+                        <div class="col-md-6">col-md-6</div>
+                    </div>
+                </div>
+                <div class="col-md-4">col-md-4</div>
+            </div>
+        </div>
+
+        <div class="container"> 列排序
+            <div class="row">
+                <div class="col-md-4 col-md-push-8" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                左边col-md-4
+                </div>
+                <div class="col-md-8 col-md-pull-4" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                右边col-md-8
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>
