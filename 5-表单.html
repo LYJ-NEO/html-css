@@ -3,7 +3,7 @@
 <html>
 
    <head>
-      <title>Bootstrap 排版</title>
+      <title>Bootstrap 表单</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
       <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -12,23 +12,149 @@
    </head>
 
    <body>
-    <form role="form">
-        <div class="form-group">
-            <label for="name">名称</label>
-            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+    <div class="container">  1-垂直基本表单的使用:
+        <form role="form"> 
+            <div class="form-group">
+                <label for="name">名称</label>
+                <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+                <label for="inputfile">文件输入</label>
+                <input type="file" id="inputfile">
+                <p class="help-block">块级帮助文本的实例。</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                <input type="checkbox">请打勾
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+        </form>
+    </div>
+    <br>
+    <div class="container"> 2-内联表单的使用:元素是内联的，向左对齐的，标签是并排的，向&lt;form&gt;标签添加class.form-inline
+        <form class="form-inline" role="form"> 
+            <div class="form-group">
+                <label class="sr-only" for="name">名称</label>
+                <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="inputfile">文件输入</label>
+                <input type="file" id="inputfile">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">请打勾
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+        </form>
+    </div>
+    <br>
+    <div class="container"> 3-水平表单：水平表单与其他表单不仅标记的数量上不同，而且表单的呈现形式也不同。 
+        向父&lt;form&gt;元素添加class.form-horizontal;
+        把标签和控件放在一个带有class.form-group的&lt;div&gt;中;
+        向标签添加class.control-label
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="firstname" class="col-sm-2 control-label">名字</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="col-sm-2 control-label">姓</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" id="lastname" placeholder="请输入姓氏">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">请记住我
+                    </label>
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    
+    <div class="container">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <label for="name">默认的复选框和单选按钮的实例:checkbox</label>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">选项 1</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">选项 2</label>
+            </div>    
         </div>
-        <div class="form-group">
-            <label for="inputfile">文件输入</label>
-            <input type="file" id="inputfile">
-            <p class="help-block">这里是块级帮助文本的实例。</p>
+        <br> 
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <label for="name">限制用户只能选择一个选项，使用radio。但各radio下的name要保持一样才能达到效果</label>   
+            <div class="radio">
+                <label>
+                    <input type="radio" name="radio-check" id="input" value="1" checked="checked">
+                    Radio Box 1
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="radio-check" id="input" value="2">
+                    Radio Box 2
+                </label>
+            </div>
         </div>
-        <div class="checkbox">
-            <label>
-            <input type="checkbox">请打勾
-            </label>
+        
+    </div>
+
+    
+    <div class="container">
+       <form action="" method="POST" role="form">
+           <legend>表单-列表选择</legend>
+           <div class="form-group">
+               <label for="">list-列表选择</label>
+               <select class="form-control">
+                   <option value="1">one</option>
+                   <option value="2">two</option>
+                   <option value="3">three</option>
+                   <option value="4">four</option>
+               </select>
+               <br>
+               <select multiple class="form-control">
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+               </select>
+           </div>
+           <button type="submit" class="btn btn-primary">提交</button>
+       </form>
+    </div>
+    
+    <form class="form-horizontal" role="form">
+    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+        <p class="form-control-static">email@example.com</p>
         </div>
-        <button type="submit" class="btn btn-default">提交</button>
+    </div>
+    <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+        <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="请输入密码">
+        </div>
+    </div>
     </form>
+
    </body>
 
 </html>
